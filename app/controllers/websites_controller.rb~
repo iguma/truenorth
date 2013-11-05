@@ -1,0 +1,14 @@
+class WebsitesController < ApplicationController
+ def new
+ end
+ def create
+  @website = Website.new(website_params)
+  @website.save
+  redirect_to @website
+end
+ 
+private
+  def website_params
+    params.require(:website).permit(:name, :string)
+  end
+end

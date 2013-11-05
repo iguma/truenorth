@@ -1,0 +1,16 @@
+class WebsitesController < ApplicationController
+  def index
+  end
+  def new
+  end
+end
+#module ErpApp
+#  module Desktop
+#    module ExampleApp
+#      class WebsiteController < ::ErpApp::Desktop::BaseController
+#      def index
+#	end
+#      end
+#    end #ExampleApp
+#  end #Desktop
+#end #ErpApp
