@@ -1,0 +1,20 @@
+<h1>Listing Websites</h1>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Title</th>
+    <th>Subtitle</th>
+    </tr>
+
+  <% @websites.each do |website| %>
+      <tr>
+        <td><%= website.name %></td>
+        <td><%= website.title %></td>
+        <td><%= website.subtitle %></td>
+      </tr>
+  <% end %>
+</table>
+
+<div id="nav">
+    <%= link_to 'New Website', new_website_path %>
+</div>
