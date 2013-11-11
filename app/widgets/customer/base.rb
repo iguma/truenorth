@@ -1,43 +1,39 @@
 module Widgets
-  module Tnweb
+  module Customer
     class Base < ErpApp::Widgets::Base
 
       self.view_paths = File.join(File.dirname(__FILE__),"/views")
 
       def index
-
         ajax = request.xhr?
-
-	      @websites = Website.all
+        @individuals = Individual.all
         if ajax
           render :update => {:id => 'widget_container', :view => :index}
         else
           render :view => :index
         end
       end
-
       def show
-        @website = Website.find(params[:id])
+        @individual = Individual.find(params[:id])
         render :update => {:id => "widget_container", :view => :show}
       end
 
       def new
-        @website = Website.new
+        @individual = Individual.new
         render :update => {:id => 'widget_container', :view => :new}
         #render :view => :new
       end
 
       def create
 
-        @website = Website.new
-        @website.name = params[:name]
-        @website.title = params[:title]
-        @website.subtitle = params[:subtitle]
+        @individual = Individual.new
+        @individual.current_first_name = params[:current_first_name]
+        @individual.current_last_name = params[:current_last_name]
 
         begin
-          if @website.save
+          if @individual.save
 
-            @websites = Website.all
+            @individuals = Individual.all
             render :update => {:id => 'widget_container', :view => :index}
 
           else
@@ -51,31 +47,29 @@ module Widgets
       end
 
       def edit
-        @website = Website.find(params[:id])
+        @individual = Individual.find(params[:id])
         render :update => {:id => "widget_container", :view => :edit}
       end
 
       def update
-        @website = Website.find(params[:id])
+        @individual = Individual.find(params[:id])
 
-        @website.name=params[:name]
-        @website.title=params[:title]
-        @website.subtitle=params[:subtitle]
-        @website.save
+        @individual.current_first_name=params[:current_first_name]
+        @individual.current_last_name=params[:current_last_name]
+        @individual.save
 
-        @websites = Website.all
+        @individuals = Individual.all
         render :update => {:id => 'widget_container', :view => :index}
       end
 
       def destroy
-        @website = Website.find(params[:id])
-        @website.destroy
+        @individual = Individual.find(params[:id])
+        @individual.destroy
 
-        @websites = Website.all
+        @individuals = Individual.all
         render :update => {:id => 'widget_container', :view => :index}
       end
 
-	#End		
       #should not be modified
       #modify at your own risk
       def locate
@@ -84,7 +78,7 @@ module Widgets
   
       class << self
         def title
-          "trueweb"
+          "customer"
         end
     
         def widget_name
@@ -92,5 +86,5 @@ module Widgets
         end
       end
     end#Base
-  end#Tnweb
+  end#Customer
 end#Widgets

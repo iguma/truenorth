@@ -1,29 +1,26 @@
-<%= form_for(@website) do |f| %>
-    <% if @website.errors.any? %>
-        <div id="errorExplanation">
-          <h2><%= pluralize(@website.errors.count, "error") %> prohibited
-            this website from being saved:</h2>
-          <ul>
-            <% @website.errors.full_messages.each do |msg| %>
-                <li><%= msg %></li>
-            <% end %>
-          </ul>
-        </div>
-    <% end %>
 
-    <div class="field">
-      <%= f.label :name %><br />
-      <%= f.text_field :name %>
-    </div>
-    <div class="field">
-      <%= f.label :title %><br />
-      <%= f.text_field :title %>
-    </div>
-    <div class="field">
-      <%= f.label :subtitle %><br />
-      <%= f.text_field :subtitle %>
-    </div>
-    <div class="actions">
-      <%= f.submit %>
+<% if @website.errors.any? %>
+    <div id="errorExplanation">
+      <h2><%= pluralize(@website.errors.count, "error") %> prohibited
+        this website from being saved:</h2>
+      <ul>
+        <% @website.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+        <% end %>
+      </ul>
     </div>
 <% end %>
+
+<div class="field">
+  <%= label_tag "Website Name" %><br />
+  <%= text_field_tag :name, @website.name || 'Enter Name' %>
+</div>
+<div class="field">
+  <%= label_tag 'Web Site Title' %><br />
+  <%= text_field_tag :title, @website.title || 'Enter Title' %>
+</div>
+<div class="field">
+  <%= label_tag 'Web Site Sub Title' %><br />
+  <%= text_field_tag :subtitle, @website.subtitle || 'Enter Subtitle' %>
+</div>
+

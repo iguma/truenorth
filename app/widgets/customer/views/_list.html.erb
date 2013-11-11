@@ -1,0 +1,24 @@
+
+<h1>Listing Customers</h1>
+<table>
+  <tr>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th colspan="3">Actions</th>
+  </tr>
+
+  <% @individuals.each do |individual| %>
+      <tr>
+        <td><%= individual.current_first_name %></td>
+        <td><%= individual.current_last_name %></td>
+        <td><%= link_to_remote 'S', build_widget_url(:show, individual.id ) %></td>
+        <td><%= link_to_remote 'E', build_widget_url(:edit, individual.id ) %></td>
+        <td><%= link_to_remote 'D', build_widget_url(:destroy, individual.id ),data: { confirm: 'Are you sure to delete this customer?' } %></td>
+
+      </tr>
+  <% end %>
+</table>
+
+<div id="nav">
+  <%= link_to_remote 'New Customer', build_widget_url(:new, "your parameters here") %>
+</div>

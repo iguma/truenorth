@@ -1,0 +1,22 @@
+
+<% if @individual.errors.any? %>
+    <div id="errorExplanation">
+      <h2><%= pluralize(@individual.errors.count, "error") %> prohibited
+        this customer from being saved:</h2>
+      <ul>
+        <% @individual.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+<% end %>
+
+<div class="field">
+  <%= label_tag "First Name" %><br />
+  <%= text_field_tag :current_first_name, @individual.current_first_name || 'Enter First Name' %>
+</div>
+<div class="field">
+  <%= label_tag 'Last Name' %><br />
+  <%= text_field_tag :current_last_name, @individual.current_last_name || 'Enter last name' %>
+</div>
+

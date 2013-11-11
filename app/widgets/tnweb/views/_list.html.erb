@@ -1,0 +1,27 @@
+
+<h1>Listing Websites</h1>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Title</th>
+    <th>Subtitle</th>
+    <th>Edit</th>
+    <th>Delete</th>
+  </tr>
+
+  <% @websites.each do |website| %>
+      <tr>
+        <td><%= website.name %></td>
+        <td><%= website.title %></td>
+        <td><%= website.subtitle %></td>
+        <td><%= link_to_remote 'S', build_widget_url(:show, website.id ) %></td>
+        <td><%= link_to_remote 'E', build_widget_url(:edit, website.id ) %></td>
+        <td><%= link_to_remote 'D', build_widget_url(:destroy, website.id ),data: { confirm: 'Are you sure to delete this website?' } %></td>
+
+      </tr>
+  <% end %>
+</table>
+
+<div id="nav">
+  <%= link_to_remote 'New Website', build_widget_url(:new, "your parameters here") %>
+</div>

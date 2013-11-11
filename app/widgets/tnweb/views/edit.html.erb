@@ -1,7 +1,12 @@
-<h1>Editing Website</h1>
+<h1>Edit Website</h1>
 
-<%= render 'form' %>
+<%= form_tag build_widget_url(:update, @website.id ), :remote => true do %>
+    <%= render 'form' %>
+
+    <%= submit_tag "Submit", website: { disable_with: "Please wait..." }  %>
+
+<% end %>
 
 <div id="nav">
-    <%= link_to 'Show', @website %> |<%= link_to 'Back', websites_path %>
+  <%= link_to_remote 'Back', build_widget_url(:index) %>
 </div>
