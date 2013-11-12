@@ -1,14 +1,55 @@
 <p>
-  <strong>Name:</strong>
+  <strong>Title:</strong>
+  <%= @individual.current_personal_title %>
+</p>
+<p>
+  <strong>First Name:</strong>
   <%= @individual.current_first_name %>
 </p>
-
 <p>
-  <strong>Title:</strong>
+  <strong>Middle Name:</strong>
+  <%= @individual.current_middle_name %>
+</p>
+<p>
+  <strong>Last Name:</strong>
   <%= @individual.current_last_name %>
 </p>
-
-
+<p>
+  <strong>Suffix:</strong>
+  <%= @individual.current_suffix %>
+</p>
+<p>
+  <strong>Nickname:</strong>
+  <%= @individual.current_nickname %>
+</p>
+<p>
+  <strong>Passport Number:</strong>
+  <%= @individual.current_passport_number %>
+</p>
+<p>
+  <strong>DOB:</strong>
+  <%= @individual.birth_date %>
+</p>
+<p>
+  <strong>Gender:</strong>
+  <%= @individual.gender %>
+</p>
+<p>
+  <strong>Total Years Work Experience:</strong>
+  <%= @individual.total_years_work_experience %>
+</p>
+<p>
+  <strong>Marital Status:</strong>
+  <%= @individual.marital_status %>
+</p>
+<p>
+  <strong>Social Security Number:</strong>
+  <%= @individualsocial_security_number %>
+</p>
+<p>
+  <strong>Comments:</strong>
+  <%= @individual.comments %>
+</p>
 <div id="nav">
   <%= link_to_remote 'Back', build_widget_url(:index) %>
 </div>

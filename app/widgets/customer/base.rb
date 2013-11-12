@@ -27,8 +27,20 @@ module Widgets
       def create
 
         @individual = Individual.new
+        @individual.current_personal_title = params[:current_personal_title]
         @individual.current_first_name = params[:current_first_name]
+        @individual.current_middle_name = params[:current_middle_name]
         @individual.current_last_name = params[:current_last_name]
+        @individual.current_suffix = params[:current_suffix]
+        @individual.current_nickname = params[:current_nickname]
+        @individual.current_passport_number = params[:current_passport_number]
+        @individual.birth_date = params[:birth_date]
+        @individual.gender = params[:gender]
+        @individual.total_years_work_experience = params[:total_years_work_experience]
+        @individual.marital_status = params[:marital_status]
+        @individual.social_security_number = params[:social_security_number]
+        @individual.comments = params[:comments]
+
 
         begin
           if @individual.save
@@ -54,9 +66,21 @@ module Widgets
       def update
         @individual = Individual.find(params[:id])
 
+        @individual.current_personal_title=params[:current_personal_title]
         @individual.current_first_name=params[:current_first_name]
+        @individual.current_middle_name=params[:current_middle_name]
         @individual.current_last_name=params[:current_last_name]
+        @individual.current_suffix=params[:current_suffix]
+        @individual.current_nickname=params[:current_nickname]
+        @individual.current_passport_number=params[:current_passport_number]
+        @individual.birth_date=params[:birth_date]
+        @individual.gender=params[:gender]
+        @individual.total_years_work_experience=params[:total_years_work_experience]
+        @individual.marital_status=params[:marital_status]
+        @individual.social_security_number=params[:social_security_number]
+        @individual.comments=params[:comments]
         @individual.save
+
 
         @individuals = Individual.all
         render :update => {:id => 'widget_container', :view => :index}
