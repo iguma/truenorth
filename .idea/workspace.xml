@@ -6,7 +6,7 @@
     <ignored path=".idea/workspace.xml" />
     <file path="/base.rb" changelist="8bd47287-4cd5-4d46-ba7c-1d9672c6b636" time="1384248680737" ignored="false" />
     <file path="/index.html.erb" changelist="8bd47287-4cd5-4d46-ba7c-1d9672c6b636" time="1383724124360" ignored="false" />
-    <file path="/_form.html.erb" changelist="8bd47287-4cd5-4d46-ba7c-1d9672c6b636" time="1384250022664" ignored="false" />
+    <file path="/_form.html.erb" changelist="8bd47287-4cd5-4d46-ba7c-1d9672c6b636" time="1384254709322" ignored="false" />
     <file path="/_list.html.erb" changelist="8bd47287-4cd5-4d46-ba7c-1d9672c6b636" time="1384167856665" ignored="false" />
     <file path="/edit.html.erb" changelist="8bd47287-4cd5-4d46-ba7c-1d9672c6b636" time="1384167026006" ignored="false" />
     <file path="/new.html.erb" changelist="8bd47287-4cd5-4d46-ba7c-1d9672c6b636" time="1384167082628" ignored="false" />
@@ -35,7 +35,7 @@
       <file leaf-file-name="_form.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/widgets/customer/views/_form.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="45" column="32" selection-start="1506" selection-end="1516" vertical-scroll-proportion="0.3968254">
+            <state line="44" column="13" selection-start="1435" selection-end="1435" vertical-scroll-proportion="0.71428573">
               <folding />
             </state>
           </provider>
@@ -53,7 +53,7 @@
       <file leaf-file-name="base.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/widgets/customer/base.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="13" selection-start="540" selection-end="540" vertical-scroll-proportion="0.0">
+            <state line="59" column="6" selection-start="2059" selection-end="2059" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -616,7 +616,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/widgets/customer/base.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="13" selection-start="540" selection-end="540" vertical-scroll-proportion="0.0">
+        <state line="59" column="6" selection-start="2059" selection-end="2059" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -630,7 +630,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/widgets/customer/views/_form.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="32" selection-start="1506" selection-end="1516" vertical-scroll-proportion="0.3968254">
+        <state line="44" column="13" selection-start="1435" selection-end="1435" vertical-scroll-proportion="0.71428573">
           <folding />
         </state>
       </provider>

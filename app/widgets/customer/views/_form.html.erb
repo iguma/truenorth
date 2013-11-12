@@ -44,6 +44,7 @@
   <%= label_tag "DOB" %><br />
   <%#= date_select_tag :birth_date, @individual.birth_date %>
   <%= text_field_tag :birth_date, @individual.birth_date %>
+  <input type=button value="select" onclick="displayDatePicker('birth_date', false, 'mdy', '-');">
 </div>
 <div class="field">
   <%= label_tag "Gender" %><br />
