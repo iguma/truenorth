@@ -1,4 +1,3 @@
-
 <% if @individual.errors.any? %>
     <div id="errorExplanation">
       <h2><%= pluralize(@individual.errors.count, "error") %> prohibited
@@ -47,10 +46,8 @@
   <%= text_field_tag :birth_date, @individual.birth_date %>
 </div>
 <div class="field">
-  <% genders = {'Male' => 'M', 'Female' => 'F'} %>
-  <% list = genders.sort %>
   <%= label_tag "Gender" %><br />
-  <%= select_tag :gender, @individual.gender %>
+  <%=  select_tag(:gender, options_for_select([['Male', 'M'], ['Female', 'F']], :selected => @individual.gender )) %>
 </div>
 <div class="field">
   <%= label_tag "Total Yrs. Work Experience" %><br />
