@@ -303,7 +303,7 @@ table
 
 table tr th, table tr td
 { background: transparent;
-  color: #FFF;
+  color: #000000;
   padding: 7px 4px;
   text-align: left;
 }
